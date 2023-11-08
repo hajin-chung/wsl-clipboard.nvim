@@ -8,7 +8,7 @@ Lazy.nvim
 
 ```lua
 {
-    dir = 'hajin-chung/wsl-clipboard.nvim',
+    'hajin-chung/wsl-clipboard.nvim',
     config = function()
       require("wsl-clipboard").setup()
     end
