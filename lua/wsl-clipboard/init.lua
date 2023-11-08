@@ -21,7 +21,7 @@ M.setup = function()
   vim.api.nvim_create_autocmd('TextYankPost', {
     callback = function()
       local selection = get_visual_selection()
-      os.execute(string.format('echo "%s" > ~/.clip; clip.exe < ~/.clip', selection))
+      os.execute(string.format('echo "%s" | clip.exe', selection))
       vim.print("copied to clipboard")
     end,
     group = clipboard_group
